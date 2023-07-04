@@ -1,0 +1,5 @@
+#!/bin/bash
+
+clear
+docker buildx build --platform linux/amd64 -t grawradiosondes/tile-cache:latest .
+docker run -p 8082:80 grawradiosondes/tile-cache
